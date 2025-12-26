@@ -1,0 +1,113 @@
+@import 'tailwindcss';
+
+/* -------------------------------
+   Custom Tailwind Theme Variables
+---------------------------------*/
+@theme inline {
+  /* Colors */
+  --color-background: #141414;
+  --color-bgSecondary: #1a1a1a;
+  --color-textPrimary: #ffffff;
+  --color-card: #212121;
+  --color-primary: #62A813;
+  --color-secondary: #FACC15;
+  --color-button: #0C0C0C;
+  --color-filterBorder: #E4E4E433;
+  --color-card: #1C1C1C;
+  --color-filterBorderLight: #BDBDBD;
+
+  /* Fonts */
+  --font-Urbanist: 'Urbanist', sans-serif;
+
+  /* Border radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.625rem;
+  --radius-xl: 0.75rem;
+}
+
+/* -------------------------------
+   Base styles
+---------------------------------*/
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply font-[var(--font-Urbanist)] text-textPrimary bg-background;
+  }
+}
+
+/* -------------------------------
+   Utilities (Custom Tailwind Classes)
+---------------------------------*/
+@layer utilities {
+  /* Fonts */
+  .font-Urbanist {
+    font-family: var(--font-Urbanist);
+  }
+
+  /* Text colors */
+  .text-primary {
+    color: var(--color-primary);
+  }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  .text-textPrimary {
+    color: var(--color-textPrimary);
+  }
+
+  /* Background colors */
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .bg-secondary {
+    background-color: var(--color-secondary);
+  }
+  .bg-background {
+    background-color: var(--color-background);
+  }
+  .bg-card {
+    background-color: var(--color-card);
+  }
+  .button-text{
+    color: var(--color-button);
+  }
+}
+
+
+@keyframes bounceWithPause {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-20px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0); /* 完ې 80% = pause */
+  }
+}
+
+.bounce-delayed {
+  animation: bounceWithPause 12s ease-in-out infinite;
+  /* total duration = (bounce 2s + pause 10s) = 12s */
+}
+
+
+
+.text-gradient {
+  font-size: 64px;
+  font-weight: bold;
+  background: linear-gradient(to right, #f00, #0f0, #00f); /* gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
