@@ -1,4 +1,4 @@
-import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { getScrollys } from "../api/services/getScrollys";
 
 interface UseScrollysOptions {

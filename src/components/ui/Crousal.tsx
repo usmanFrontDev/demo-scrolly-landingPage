@@ -9,7 +9,7 @@ const CustomCarousel = () => {
 
   const {theme} = useTheme()
 
-const { data, isLoading, isError } = useRecentScrollys();
+const { data} = useRecentScrollys();
 
   // State for just image URLs
   const [images, setImages] = useState<string[]>([]);
@@ -115,10 +115,10 @@ const { data, isLoading, isError } = useRecentScrollys();
     const offset = position * baseOffset;
 
     // Gradually decrease opacity
-    const opacity = Math.max(0.4, 1 - absPos * 0.18);
+    // const opacity = Math.max(0.4, 1 - absPos * 0.18);
 
     // Gradually decrease brightness
-    const brightness = Math.max(0.6, 1 - absPos * 0.12);
+    // const brightness = Math.max(0.6, 1 - absPos * 0.12);
 
     // Slight rotation for depth
     const rotateY = position * -8;
